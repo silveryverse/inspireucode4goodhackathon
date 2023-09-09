@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="form-container">
+    <form method="post">
+        {% csrf_token %}
+        <label for="plant_type">Plant Type:</label>
+        <select id="plant_type" name="plant_type">
+            <option value="combo">Combo</option>
+            <option value="flower">Flower</option>
+            <option value="tree">Tree</option>
+            <option value="oak">Oak Tree</option>
+            <option value="maple">Maple Tree</option>
+            <option value="pine">Pine Tree</option>
+           
+        </select><br>
+
+        <label for="total_budget">Total Budget (in ₹):</label>
+        <input type="number" id="total_budget" name="total_budget" required><br>
+
+        <label for="total_plants">Total Plants:</label>
+        <input type="number" id="total_plants" name="total_plants" required><br>
+
+        <button type="submit">Get Recommendations</button>
+    </form>
+</div>
+
+
+{%endblock%}

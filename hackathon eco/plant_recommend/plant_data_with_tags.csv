@@ -1,0 +1,272 @@
+common_name,hindi_name,price,tag
+Rose,गुलाब,200,flower
+Tulip,ट्यूलिप,300,flower
+Bamboo,बांस,100,tree
+Mango Tree,आम का पेड़,500,tree
+Lavender,लैवेंडर,150,flower
+Hibiscus,गुड़हल,100,flower
+Money Plant,पैसों का पौधा,50,indoor
+Neem,नीम,100,tree
+Tulsi,तुलसी,20,herb
+Palm Tree,पॉम ट्री,500,tree
+Marigold,गेंदा,50,flower
+Bougainvillea,बूगेनविलिया,200,flower
+Aloe Vera,घृतकुमारी,100,indoor
+Jasmine,चमेली,150,flower
+Cactus,कैक्टस,20,indoor
+Poinsettia,पॉइंसेटिया,100,indoor
+Banana Tree,केला पेड़,200,fruit
+Chrysanthemum,शेवंती,50,flower
+Orchid,ऑर्किड,200,flower
+Pine,पाइन,300,tree
+Lily,लिली,150,flower
+Sunflower,सूरजमुखी,20,flower
+Daisy,डेजी,20,flower
+Peppermint,पेपरमिंट,20,herb
+Cypress,सायप्रेस,200,tree
+Gardenia,गार्डेनिया,150,flower
+Peony,पियोनी,100,flower
+Basil Thyme,बेसिल थाइम,20,herb
+Freesia,फ्रेसिया,100,flower
+Balsam Impatiens,बाल्सम इम्पेशेंस,50,flower
+Oregano,ओरेगेनो,20,herb
+Petunia,पेटूनिया,50,flower
+Brahmi,ब्राह्मी,100,herb
+Crocus,क्रोकस,20,flower
+Zinnia,ज़िनिया,50,flower
+Rhubarb,रूबार्ब,200,vegetable
+Daffodil,डैफोडिल,100,flower
+Basil Ocimum basilicum,बेसिल,20,herb
+Morning Glory,मॉर्निंग ग्लोरी,20,flower
+Chili Pepper,मिर्च,50,vegetable
+Maple Tree,मेपल पेड़,200,tree
+Geranium,जेरेनियम,100,flower
+Parsley,पार्सली,20,herb
+Iris,आईरिस,150,flower
+Fern,फर्न,50,indoor
+Cilantro,धनिया,20,herb
+Dahlia,डेलिया,100,flower
+Lemon Tree,नीमबू का पेड़,200,fruit
+Tarragon,टैरेगोन,20,herb
+Hollyhock,हॉलीहॉक,50,flower
+African Violet,अफ्रीकन वायलेट,20,indoor
+Gladiolus,ग्लैडियोलस,100,flower
+Pumpkin,कद्दू,50,vegetable
+Carnation,कार्नेशन,100,flower
+Watermelon,तरबूज,20,fruit
+Sage,सेज़,20,herb
+Pomegranate Tree,अनार का पेड़,200,fruit
+Pansy,पैंसी,50,flower
+Tiger Lily,टाइगर लिली,100,flower
+Basil Sweet,मिठा तुलसी,20,herb
+Snapdragon,स्नैपड्रैगन,20,flower
+Raspberry Bush,रस्पबेरी बुश,100,fruit
+Spider Plant,स्पाइडर प्लांट,20,indoor
+Lettuce,लेटुस,50,vegetable
+Artichoke,आर्टिचोक,100,vegetable
+Sweet Potato,शकरकंद,20,vegetable
+Wisteria,विस्टीरिया,200,flower
+Foxglove,फॉक्सग्लव,50,flower
+Calla Lily,कैला लिली,100,flower
+Asparagus,अस्पेरगस,20,vegetable
+Grapevine,अंगूर का पेड़,100,fruit
+Bamboo Bambusoideae spp.,बांस,200,tree
+Maranta,मरांता,50,indoor
+Ageratum,ऐजेरेटम,20,flower
+Coreopsis,कोरियोप्सिस,100,flower
+Honeysuckle,हनीसकल,20,flower
+Peperomia,पेपेरोमिया,50,indoor
+Potato,आलू,100,vegetable
+Cucumber,खीरा,20,vegetable
+Palm Kentia,केंटिया पॉम,200,indoor
+Begonia,बेगोनिया,100,flower
+Spiderwort,स्पाइडरवॉर्ट,20,flower
+Dracaena,ड्रैसेना,50,indoor
+Nasturtium,नास्तर्शियम,100,flower
+Vinca,विंका,20,flower
+Air Plant,एयर प्लांट,50,indoor
+Bird of Paradise,बर्ड ऑफ पैरडाइस,100,flower
+Dumb Cane,डम्ब केन,20,indoor
+Wandering Jew,वॉंडरिंग जू,200,indoor
+Snake Plant,स्नेक प्लांट,50,indoor
+Creeping Jenny,क्रीपिंग जेनी,100,indoor
+Zebra Plant,ज़ीब्रा प्लांट,20,indoor
+Baby's Tears,बेबीज़ टियर्स,20,indoor
+Hens and Chicks,हेंस और चिक्स,50,indoor
+Peace Lily,पीस लिली,100,indoor
+Weeping Fig,वीपिंग फिग,20,indoor
+Boston Fern,बॉस्टन फर्न,200,indoor
+African Mask Plant,अफ्रीकन मास्क प्लांट,50,indoor
+Schefflera,शेफ्लेरा,100,indoor
+Eucalyptus,यूकलिप्टस,20,tree
+Prayer Plant,प्रेयर प्लांट,20,indoor
+ZZ Plant,जेट्जेट प्लांट,50,indoor
+Ficus,फिकस,100,indoor
+Aloe Vera,घृतकुमारी,20,indoor
+Pothos,पोथोस,20,indoor
+Bamboo Palm,बांस पाम,50,indoor
+Coleus,कोलियस,30,indoor
+Areca Palm,अरेका पाम,60,indoor
+Pilea,पिलिया,25,indoor
+Lucky Bamboo,लकी बांस,15,indoor
+Dracaena Marginata,ड्रेसेना मार्जिनाटा,35,indoor
+Cacti Mix,कैक्टी मिक्स,20,indoor
+Fiddle Leaf Fig,फिडल लीफ फिग,40,indoor
+Rubber Plant,रबर प्लांट,25,indoor
+String of Pearls,स्ट्रिंग ऑफ पर्ल्स,30,indoor
+Calathea,कैलाथिया,20,indoor
+Pachira Aquatica,पाचीरा एक्वाटिका,45,indoor
+Alocasia,अलोकेशिया,25,indoor
+Aglaonema,अग्लाओनेमा,30,indoor
+Sansevieria,सैनसेवियरिया,20,indoor
+Spathiphyllum,स्पैथिफिलम,35,indoor
+Philodendron,फिलोडेंड्रॉन,25,indoor
+Tradescantia Zebrina,ट्रेडेस्कांटिया जेब्रिना,30,indoor
+Jade Plant,जेड प्लांट,20,indoor
+Hoya Carnosa,होया कर्नोसा,35,indoor
+Haworthia,हैवोर्थिया,15,indoor
+Portulacaria Afra,पोर्चुलाकारिया आफ्रा,25,indoor
+Senecio Rowleyanus,सेनेकियो रॉलियानस,30,indoor
+Ficus Benjamina,फिकस बेंजामिना,40,indoor
+Aloe Vera,घृतकुमारी,20,indoor
+Monstera Deliciosa,मॉनस्टेरा डेलिशियोसा,35,indoor
+Golden Pothos,गोल्डन पोथोस,25,indoor
+Schefflera,शेफ्लेरा,30,indoor
+Oxalis,ऑक्सालिस,20,indoor
+Croton,क्रोटन,30,indoor
+Kalanchoe,कैलांचो,15,indoor
+Pothos N'Joy,पोथोस एनजॉय,25,indoor
+Sedum,सीडम,20,indoor
+Gloxinia,ग्लोक्सिनिया,35,indoor
+Dracaena Compacta,ड्रैसेना कॉम्पैक्टा,30,indoor
+Peperomia,पेपेरोमिया,20,indoor
+African Violet,अफ्रीकन वायलेट,30,indoor
+Begonia Rex,बेगोनिया रेक्स,25,indoor
+Christmas Cactus,क्रिसमस कैक्टस,20,indoor
+Flaming Katy,फ्लेमिंग केटी,20,indoor
+Mimosa Pudica,मिमोसा पूडिका,25,indoor
+Croton Petra,क्रोटन पेट्रा,30,indoor
+String of Hearts,हार्ट्स का स्ट्रिंग,15,indoor
+Alocasia Polly,अलोकेशिया पॉली,30,indoor
+Peacock Plant,पीकॉक प्लांट,20,indoor
+African Milk Tree,अफ्रीकन मिल्क ट्री,25,indoor
+Bear's Paw,बेयर्स पॉ,30,indoor
+Angel Wing Begonia,एंजल विंग बेगोनिया,20,indoor
+Yucca Plant,युक्का प्लांट,35,indoor
+Bromeliad,ब्रोमेलियाड,25,indoor
+Aloe Vera,घृतकुमारी,20,indoor
+Caladium,कैलेडियम,30,indoor
+Peace Lily,पीस लिली,20,indoor
+Umbrella Plant,अंब्रेला प्लांट,35,indoor
+Hoya Kerrii,होया केरी,30,indoor
+Lipstick Plant,लिपस्टिक प्लांट,20,indoor
+Rattlesnake Plant,रैटलस्नेक प्लांट,25,indoor
+Bird of Paradise,बर्ड ऑफ पैरडाइस,30,indoor
+Dumb Cane,डम्ब केन,20,indoor
+Wandering Jew,वॉंडरिंग जू,25,indoor
+Cast Iron Plant,कास्ट आयरन प्लांट,30,indoor
+Pilea Peperomioides,पिलिया पेपेरोमियोइडेस,20,indoor
+Chinese Money Plant,चाइनीज़ मनी प्लांट,35,indoor
+Air Plant,एयर प्लांट,25,indoor
+Spider Plant,स्पाइडर प्लांट,30,indoor
+Calathea Orbifolia,कैलाथिया ओर्बिफोलिया,20,indoor
+ZZ Plant,जेट्जेट प्लांट,25,indoor
+Ficus Lyrata,फिकस लाइराटा,30,indoor
+Rubber Plant,रबर प्लांट,20,indoor
+Monstera Adansonii,मॉनस्टेरा आडनसोनी,35,indoor
+Pothos Marble Queen,पोथोस मार्बल क्वीन,30,indoor
+Alocasia Amazonica,अलोकेशिया अमेज़ॉनिका,20,indoor
+Philodendron Birkin,फिलोडेंड्रॉन बिर्किन,25,indoor
+Satin Pothos,सैटिन पोथोस,30,indoor
+Nerve Plant,नर्व प्लांट,20,indoor
+Calathea Medallion,कैलाथिया मेडलियन,35,indoor
+Parlor Palm,पार्लर पाम,30,indoor
+Snake Plant,स्नेक प्लांट,20,indoor
+Golden Pothos,गोल्डन पोथोस,25,indoor
+Begonia Maculata,बेगोनिया मैकुलाटा,30,indoor
+Prayer Plant,प्रेयर प्लांट,20,indoor
+ZZ Raven,जेट्जेट रेवन,35,indoor
+Pilea Moon Valley,पिलिया मून वैली,30,indoor
+Spiderwort,स्पाइडरवॉर्ट,20,indoor
+Kalanchoe Tomentosa,कैलांचो टोमेंटोसा,25,indoor
+Ficus Audrey,फिकस ऑड्री,30,indoor
+African Violet,अफ्रीकन वायलेट,20,indoor
+Kalanchoe Millotii,कैलांचो मिलोटी,30,indoor
+Hoya Retusa,होया रेटुसा,20,indoor
+Lipstick Euphorbia,लिपस्टिक यूफोर्बिया,25,indoor
+Pilea Cadierei,पिलिया कैदियरी,30,indoor
+Rattlesnake Calathea,रैटलस्नेक कैलाथिया,20,indoor
+Peperomia Napoli Nights,पेपेरोमिया नापोली नाइट्स,35,indoor
+Hoya Obovata,होया ओबोवाटा,30,indoor
+Climbing Philodendron,क्लाइमिंग फिलोडेंड्रॉन,20,indoor
+Spiderwort Tradescantia,स्पाइडरवॉर्ट ट्रेडेस्कांटिया,25,indoor
+Monstera Siltepecana,मॉनस्टेरा सिल्टेपेकाना,30,indoor
+Sansevieria Cylindrica,सैनसेवियरिया साइलिंड्रिका,20,indoor
+Ficus Elastica Tineke,फिकस एलास्टिका टिनेक,35,indoor
+Begonia Brevirimosa,बेगोनिया ब्रेविरिमोसा,30,indoor
+Calathea Roseopicta,कैलाथिया रोजोपिक्टा,20,indoor
+Dracaena Compacta,ड्रैसेना कॉम्पैक्टा,25,indoor
+Sansevieria Fernwood,सैनसेवियरिया फर्नवुड,30,indoor
+Peacock Begonia,पीकॉक बेगोनिया,20,indoor
+Aglaonema Sparkling Sarah,अग्लाओनेमा स्पार्कलिंग सारा,35,indoor
+Philodendron Micans,फिलोडेंड्रॉन माइकंस,30,indoor
+Kalanchoe Delagoensis,कैलांचो डेलगोंसिस,20,indoor
+Calathea Beauty Star,कैलाथिया ब्यूटी स्टार,25,indoor
+Alocasia Stingray,अलोकेशिया स्टिंगरे,30,indoor
+Epiphyllum Anguliger,एपिफिलम एंगुलिगर,20,indoor
+Rattlesnake Haworthia,रैटलस्नेक हॉवर्थिया,35,indoor
+Peperomia Frost,पेपेरोमिया फ्रॉस्ट,30,indoor
+String of Hearts Silver Glory,स्ट्रिंग ऑफ हार्ट्स सिल्वर ग्लोरी,20,indoor
+Monstera Standleyana,मॉनस्टेरा स्टैंडलियाना,25,indoor
+Sansevieria Moonshine,सैनसेवियरिया मूनशाइन,30,indoor
+Alocasia Black Velvet,अलोकेशिया ब्लैक वेलवेट,20,indoor
+Echeveria Black Prince,एकेवेरिया ब्लैक प्रिंस,35,indoor
+Sedum Morganianum,सीडम मोर्गेनियानुम,30,indoor
+Calathea Network,कैलाथिया नेटवर्क,20,indoor
+Philodendron Scandens,फिलोडेंड्रॉन स्कैंडेंस,25,indoor
+Ficus Pumila Variegata,फिकस पुमिला वेरीगाटा,30,indoor
+Cactus Euphorbia Obesa,कैक्टस यूफोर्बिया ओबेसा,20,indoor
+Peperomia Watermelon,पेपेरोमिया वॉटरमेलन,35,indoor
+Tradescantia Fluminensis,ट्रेडेस्कांटिया फ्लुमिनेन्सिस,30,indoor
+Soleirolia Soleirolii,सोलेइरोलिया सोलेइरोलियी,20,indoor
+Satin Pothos Silver Lady,सैटिन पोथोस सिल्वर लेडी,25,indoor
+Bamboo Bambusoideae spp.,बांस,30,tree
+Flamingo Flower Anthurium,फ्लेमिंगो फ्लावर एंथुरियम,20,indoor
+Dahlia,डेलिया,100,flower
+Lemon Tree,नीमबू का पेड़,200,fruit
+Tarragon,टैरेगोन,20,herb
+Hollyhock,हॉलीहॉक,50,flower
+African Violet,अफ्रीकन वायलेट,20,indoor
+Gladiolus,ग्लैडियोलस,100,flower
+Pumpkin,कद्दू,50,vegetable
+Carnation,कार्नेशन,100,flower
+Watermelon,तरबूज,20,fruit
+Sage,सेज़,20,herb
+Pomegranate Tree,अनार का पेड़,200,fruit
+Pansy,पैंसी,50,flower
+Tiger Lily,टाइगर लिली,100,flower
+Basil Sweet,मिठा तुलसी,20,herb
+Snapdragon,स्नैपड्रैगन,20,flower
+Raspberry Bush,रस्पबेरी बुश,100,fruit
+Spider Plant,स्पाइडर प्लांट,20,indoor
+Lettuce,लेटुस,50,vegetable
+Artichoke,आर्टिचोक,100,vegetable
+Sweet Potato,शकरकंद,20,vegetable
+Wisteria,विस्टीरिया,200,flower
+Foxglove,फॉक्सग्लव,50,flower
+Calla Lily,कैला लिली,100,flower
+Asparagus,अस्पेरगस,20,vegetable
+Grapevine,अंगूर का पेड़,100,fruit
+Bamboo Bambusoideae spp.,बांस,200,tree
+Maranta,मरांता,50,indoor
+Ageratum,ऐजेरेटम,20,flower
+Lavender,लैवेंडर,100,herb
+Kale,केल,50,vegetable
+Aubrieta,ऑब्रिएटा,20,flower
+Dragon Fruit,ड्रैगन फ्रूट,100,fruit
+Avocado Tree,एवोकाडो का पेड़,200,fruit
+Lemon Balm,नीम तुलसी,20,herb
+Ginger,अदरक,50,vegetable
+Sweet Alyssum,स्वीट एलिसम,20,flower
+Juniper,जूनिपर,100,tree
+Alocasia Frydek,अलोकेशिया फ्राइडेक,50,indoor

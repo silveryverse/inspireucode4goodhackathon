@@ -1,0 +1,149 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>LEADERBOARD🏆</h1>
+<div class="containerlead">
+    <div class="left-column">
+        <form id="treeForm">
+            <h2>Enter Your Tree Planting Data</h2>
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" required>
+            <label for="treesPlanted">Number of Trees Planted (last month):</label>
+            <input type="number" id="treesPlanted" required>
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Card for "Do you use an electric car?" button -->
+        <div class="card-button" id="electricCarBtn">
+            <i class="fas fa-car"></i> Do you use an electric car?
+        </div>
+<button id="solarPanelBtn">Calculate Solar Panels</button>
+
+<div id="solarPanelInfo" style="display: none;">
+<h2>Solar Panel Calculation</h2>
+<p>Enter your average monthly electricity consumption (in kWh):</p>
+<input type="number" id="monthlyConsumption" required>
+<button id="calculateSolarBtn">Calculate</button>
+<p>Number of solar panels needed:</p>
+<p id="solarPanelCount">Calculating...</p>
+<p>Estimated cost of solar panels (in rupees):</p>
+<p id="solarPanelCost">Calculating...</p>
+<p>Buy solar panels on <a href="#" id="buySolarLink" target="_blank">Amazon</a></p>
+</div>
+
+    </div>
+    <div class="right-column">
+        <div id="userProfile">
+            <h2>User Profile</h2>
+            <p>Full Name: <span id="userName">John Doe</span></p>
+            <p>Number of Trees Planted: <span id="userTreesPlanted">0</span></p>
+            <p>Badges: <span id="userBadges">0</span></p>
+            <h2>Badge Criteria</h2>
+            <ul id="badgeCriteria">
+                <li><i class="fas fa-medal"></i> Green Thumb Badge: Plant 10 trees</li>
+                <li><i class="fas fa-medal"></i> Environmental Champion Badge: Plant 50 trees</li>
+                <li><i class="fas fa-medal"></i> Tree Hero Badge: Plant 100 trees</li>
+                <li><i class="fas fa-car"></i> Environment Saver Badge: Use an electric car</li>
+            </ul>
+        </div>
+        <div id="ranking">
+            <h2>Ranking</h2>
+            <ol id="userRanking">
+                <!-- Sample ranking entries with Font Awesome icons for badges -->
+                <li><i class="fas fa-medal"></i> User 1 - 100 trees planted</li>
+                <li><i class="fas fa-medal"></i> User 2 - 75 trees planted</li>
+                <li><i class="fas fa-medal"></i> User 3 - 50 trees planted</li>
+                
+            </ol>
+        </div>
+    </div>
+</div>
+
+<div class="electric-car-section" id="electricCarSection" style="display: none;">
+    <h2>Electric Car Information</h2>
+    <form id="electricCarForm">
+        <label for="carName">Your Name:</label>
+        <input type="text" id="carName" required>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="impactInfo">
+        <h3>Your Positive Impact on the Environment</h3>
+        <p>Your use of an electric car contributes to a reduction in fossil fuel consumption and greenhouse gas emissions.</p>
+        <p>Estimated Contribution:</p>
+        <ul>
+            <li>Fossil Fuel Saved: <span id="fossilFuelSaved">Calculating...</span></li>
+            <li>Contribution to Earth: <span id="contributionToEarth">Calculating...</span></li>
+        </ul>
+    </div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+<script src="/static/script.js"></script> 
+
+<!-- Sliding Panel -->
+<div class="sliding-panel">
+<div class="panel-content">
+    <h2>Renewable Energy Awareness</h2>
+    <p>Renewable energy is a sustainable and eco-friendly source of power that offers numerous benefits. It's crucial to consider integrating renewable energy solutions into our daily lives. Here are some compelling reasons to use renewable energy at home:</p>
+    <ul>
+        <li>
+            <strong>Environmental Benefits:</strong> Renewable energy sources, such as <a href="https://en.wikipedia.org/wiki/Solar_power" target="_blank">solar</a> and <a href="https://en.wikipedia.org/wiki/Wind_power" target="_blank">wind</a> power, produce minimal greenhouse gas emissions. This means that by using these sources, you're actively contributing to the reduction of harmful emissions that drive climate change.
+        </li>
+        <li>
+            <strong>Cost Savings:</strong> Investing in renewable energy systems can lead to significant long-term savings on your energy bills. While the initial setup may require an investment, the reduced reliance on traditional energy sources can result in substantial financial benefits over time.
+        </li>
+        <li>
+            <strong>Energy Independence:</strong> By harnessing energy from renewable sources like the sun and wind, you're reducing your dependence on non-renewable fossil fuels. This move toward energy independence not only benefits you but also contributes to a more sustainable and secure energy future.
+        </li>
+    </ul>
+    <p>Now, let's explore some common renewable energy sources:</p>
+    <h3>Solar Energy</h3>
+    <img src="/static/img/solar-panel.jpg" alt="Solar Panels" style="max-width: 100%; height: auto;">
+    <p>Solar panels capture energy from the sun's rays and convert it into electricity. This clean and renewable energy source can be installed on rooftops or in dedicated solar farms. It's a reliable way to generate electricity for homes and businesses, reducing your carbon footprint.</p>
+
+    <h3>Wind Energy</h3>
+    <img src="/static/img/wind-turbine.jpg" alt="Wind Turbine" style="max-width: 100%; height: auto;">
+    <p>Wind turbines harness the power of the wind to generate electricity. These elegant structures can be found in wind farms and coastal areas. <a href="https://en.wikipedia.org/wiki/Wind_power" target="_blank">Wind energy</a> is a sustainable choice that helps reduce reliance on fossil fuels while providing a steady source of power.</p>
+
+    <h3>Hydropower</h3>
+    <img src="/static/img/hydropower.jpg" alt="Hydropower Plant" style="max-width: 100%; height: auto;">
+    <p><a href="https://en.wikipedia.org/wiki/Hydropower" target="_blank">Hydropower</a>, or hydroelectric power, uses the energy of flowing water to generate electricity. It's a renewable energy source that has been in use for decades. Hydropower plants can vary in size, from small installations in rivers to large dams and reservoirs.</p>
+</div>
+<span class="close-btn" id="closePanel">&times;</span>
+</div>
+
+<!-- Button to open the sliding panel -->
+<button class="card-button" id="openPanelButton">
+<i class="fas fa-leaf"></i> Learn about Renewable Energy
+</button>
+
+
+<!-- JavaScript for sliding panel -->
+<script>
+// JavaScript for sliding panel
+const slidingPanel = document.querySelector('.sliding-panel');
+const closePanelButton = document.getElementById('closePanel');
+const openPanelButton = document.getElementById('openPanelButton');
+
+// Function to open the panel
+function openPanel() {
+    slidingPanel.style.right = '0';
+}
+
+// Function to close the panel
+function closePanel() {
+    slidingPanel.style.right = '-400px';
+}
+
+// Event listeners
+document.addEventListener('DOMContentLoaded', () => {
+    closePanelButton.addEventListener('click', closePanel);
+    openPanelButton.addEventListener('click', openPanel);
+});
+</script>
+
+
+
+{%endblock%}

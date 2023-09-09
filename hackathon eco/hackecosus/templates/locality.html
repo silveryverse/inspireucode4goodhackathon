@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{%block content%}
+
+<header>
+    <h1>Locality Images</h1>
+</header>
+
+{% for a in serviceData %}
+<div class='posts'>
+    <img src="media/{{ a.image }}" alt="Locality Image" class="image" width='500'>
+    <div class="details">
+        <h2>{{ a.location }}</h2>
+        <h6>Pincode: {{ a.pincode }}</h6>
+        <p class="description">{{ a.description }}</p>
+    </div>
+</div>
+{% endfor %}
+
+{%endblock%}

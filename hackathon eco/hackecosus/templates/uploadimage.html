@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class='shareimage'>
+    <section >
+        <h2>Why Share Your Images?</h2>
+        <p>
+            Your local community is an essential part of your life, and it's important to keep it clean and safe. By sharing images of environmental problems like pollution, garbage, and other issues, you can:
+        </p>
+        <ul>
+            <li>Raise awareness about the problems in your locality.</li>
+            <li>Encourage community members and authorities to take action.</li>
+            <li>Drive positive change and make your neighborhood a better place.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>How to Share Your Images</h2>
+        <p>
+            It's easy to share your images with us. Simply follow these steps:
+        </p>
+        <ul class='stepslist'>
+            <li>Take clear and well-lit photos of the environmental issues in your locality.</li>
+            <li>Click the "Choose File" button below to upload your images.</li>
+            <li>Provide a brief description of each image to help us understand the problem.</li>
+            <li>Include the location or pincode where the photos were taken.</li>
+            <li>Click the "Upload" button to submit your images.</li>
+        </ul>
+
+    </section>
+
+</div>
+<div class="container">
+    
+    <h2>Upload an Image</h2>
+    <form method="post" action="{% url 'upload-images-of-your-neighbourhood' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="pincode">Pincode</label>
+            <input type="number" class="form-control" name="pincode" id="pincode" required>
+        </div>
+        
+        <div class="mb-3">
+            <label for="location">Location</label>
+            <input type="text" class="form-control" name="location" id="location" required>
+        </div>
+        
+        <div class="mb-3">
+            <label for="description">Description</label>
+            <textarea class="form-control" name="description" id="description" rows="3" placeholder='Describe your image here...' required></textarea>
+        </div>
+        
+        
+        <div class="mb-3">
+            <label for="image">Image</label>
+            <input type="file" class="form-control" name="image" id="image" required>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Upload</button>
+    </form>
+</div>
+<br>
+{% endblock %}

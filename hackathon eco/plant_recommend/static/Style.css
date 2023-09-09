@@ -1,0 +1,26 @@
+body {
+
+ 
+
+    margin: 0;
+}
+
+
+.navbar{
+    position: sticky;
+}
+.info{
+    margin-top: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.plantform {
+    text-align: center;
+}
