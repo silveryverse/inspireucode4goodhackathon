@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌱Order Plants from Nearby Nurseries🌱</title>
+    <style>
+        /* Your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eaf0d6; /* Light green background */
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        main {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .column {
+            flex: 1;
+            padding: 10px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #51d0de;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        /* City buttons styles */
+        .city-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: rgba(76, 175, 80, 0.7); /* Transparent green background */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .city-button:hover {
+            background-color: rgba(69, 160, 73, 0.7); /* Transparent darker green on hover */
+        }
+
+        .city-button.selected {
+            background-color: rgba(69, 160, 73, 0.7); /* Transparent darker green for selected city */
+        }
+
+        /* Nursery cards styles */
+        .nursery-card {
+            padding: 15px;
+            margin: 10px 0;
+            background-color: rgba(255, 255, 255, 0.9); /* Transparent white background */
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .nursery-card:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* Query section styles */
+        .query-section {
+            display: none;
+            background-color: rgba(255, 255, 255, 0.9); /* Transparent white background */
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Placed orders list styles */
+        #placedOrders {
+            list-style: none;
+            padding: 0;
+        }
+
+        #placedOrders li {
+            margin: 5px 0;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.9); /* Transparent white background */
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+
+        /* Form input styles */
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: rgba(255, 255, 255, 0.5); /* Transparent white background for input */
+        }
+
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        
+       
+    </style>
+</head>
+<body class="nature-background">
+    <header>
+        <h1>🌱Order Plants from Nearby Nurseries🌱</h1>
+    </header>
+    <main>
+        <section class="column">
+            <h2>Choose Your City</h2>
+            <div id="cityButtons">
+                <!-- City buttons will be populated here -->
+            </div>
+        </section>
+        <section class="column">
+            <h2>Choose a Nursery</h2>
+            <div id="nurseryList">
+                <!-- Nursery cards will be populated here based on the selected city -->
+            </div>
+        </section>
+        <section>
+            <div class="query-section" id="querySection">
+                <h2>Place an Order</h2>
+                <form id="orderForm" onsubmit="saveOrder()">
+                    <label for="userName">Name:</label>
+                    <input type="text" id="userName" name="userName" required>
+                    <label for="userAddress">Address:</label>
+                    <input type="text" id="userAddress" name="userAddress" required>
+                    <label for="plantsToBuy">Plants to Buy:</label>
+                    <input type="text" id="plantsToBuy" name="plantsToBuy" required>
+                    <button type="submit">Place Order</button>
+                </form>
+            </div>
+        </section>
+        <section>
+            <h2> Placed Orders</h2>
+            <ul id="placedOrders">
+                <!-- Placed orders will appear here -->
+            </ul>
+        </section>
+    </main>
+
+    <script>
+        // Sample data for nurseries in different cities
+        const nurseriesData = {
+            DELHI: [
+                { name: 'Green Garden Nursery', location: 'Delhi', address: '123 Green Street' },
+                { name: "Nature's Haven Nursery", location: 'Delhi', address: '456 Haven Lane' },
+                { name: 'Urban Oasis Nursery', location: 'Delhi', address: '789 Oasis Road' },
+                { name: 'Floral Paradise Nursery', location: 'Delhi', address: '567 Floral Avenue' },
+                { name: 'Blossom World Nursery', location: 'Delhi', address: '890 Blossom Lane' },
+                { name: 'Greenthumb Nursery', location: 'Delhi', address: '234 Greenthumb Street' },
+            ],
+            BANGALORE: [
+                { name: 'Garden Delights Nursery', location: 'Bangalore', address: '123 Garden Street' },
+                { name: 'Botanical Bliss Nursery', location: 'Bangalore', address: '456 Botanical Lane' },
+                { name: 'Evergreen Gardens Nursery', location: 'Bangalore', address: '789 Evergreen Road' },
+                { name: 'Green Valley Nursery', location: 'Bangalore', address: '567 Green Valley Avenue' },
+                { name: 'Bloomington Nursery', location: 'Bangalore', address: '890 Bloomington Lane' },
+                { name: 'Leafy Lane Nursery', location: 'Bangalore', address: '234 Leafy Lane' },
+            ],
+            DEHRADUN: [
+                { name: 'Himalayan Flora Nursery', location: 'Dehradun', address: '123 Himalayan Street' },
+                { name: 'Forest Haven Nursery', location: 'Dehradun', address: '456 Forest Lane' },
+                { name: 'Riverbank Greens Nursery', location: 'Dehradun', address: '789 Riverbank Road' },
+                { name: 'Mountain View Nursery', location: 'Dehradun', address: '567 Mountain View Avenue' },
+                { name: 'Valley Plants Nursery', location: 'Dehradun', address: '890 Valley Plants Lane' },
+                { name: 'Hillside Gardens Nursery', location: 'Dehradun', address: '234 Hillside Lane' },
+            ],
+            MANDI: [
+                { name: 'Riverside Greens Nursery', location: 'Mandi', address: '123 Riverside Street' },
+                { name: 'Himalayan Heights Nursery', location: 'Mandi', address: '456 Heights Lane' },
+                { name: 'Orchard Oasis Nursery', location: 'Mandi', address: '789 Orchard Road' },
+                { name: 'Mountain Breeze Nursery', location: 'Mandi', address: '567 Mountain Breeze Avenue' },
+                { name: 'Riverfront Plants Nursery', location: 'Mandi', address: '890 Riverfront Lane' },
+                { name: 'Highland Greens Nursery', location: 'Mandi', address: '234 Highland Lane' },
+            ],
+            GURUGRAM: [
+                { name: 'Cityscape Nursery', location: 'Gurugram', address: '123 Cityscape Street' },
+                { name: 'Urban Oasis Nursery', location: 'Gurugram', address: '456 Oasis Lane' },
+                { name: 'Metro Greens Nursery', location: 'Gurugram', address: '789 Metro Road' },
+                { name: 'Garden of Eden Nursery', location: 'Gurugram', address: '567 Garden of Eden Avenue' },
+                { name: 'Sustainable Greens Nursery', location: 'Gurugram', address: '890 Sustainable Lane' },
+                { name: 'Greenthumb Nursery', location: 'Gurugram', address: '234 Greenthumb Street' },
+            ],
+            MUMBAI: [
+                { name: 'Coastal Garden Nursery', location: 'Mumbai', address: '123 Coastal Street' },
+                { name: 'City Botanica Nursery', location: 'Mumbai', address: '456 Botanica Lane' },
+                { name: 'Palm Paradise Nursery', location: 'Mumbai', address: '789 Palm Road' },
+                { name: 'Bayside Blooms Nursery', location: 'Mumbai', address: '567 Bayside Avenue' },
+                { name: 'Tropical Haven Nursery', location: 'Mumbai', address: '890 Tropical Lane' },
+                { name: 'Green Oasis Nursery', location: 'Mumbai', address: '234 Green Oasis Street' },
+            ],
+            
+        };
+
+        let selectedNursery = null;
+        let selectedCity = null;
+
+        // Function to populate city buttons
+        function populateCityButtons() {
+            const cityButtons = document.getElementById('cityButtons');
+            for (const city in nurseriesData) {
+                const cityButton = document.createElement('button');
+                cityButton.classList.add('city-button');
+                cityButton.textContent = city;
+                cityButton.onclick = () => selectCity(city);
+                cityButtons.appendChild(cityButton);
+            }
+        }
+
+        // Function to update the list of nurseries based on the selected city
+        function selectCity(city) {
+            selectedCity = city;
+            updateNurseries();
+        }
+
+        // Function to update the list of nurseries based on the selected city
+        function updateNurseries() {
+            const cityButtons = document.querySelectorAll('.city-button');
+            cityButtons.forEach((button) => {
+                button.classList.remove('selected');
+                if (button.textContent === selectedCity) {
+                    button.classList.add('selected');
+                }
+            });
+
+            const nurseryList = document.getElementById('nurseryList');
+            nurseryList.innerHTML = '';
+
+            if (nurseriesData[selectedCity]) {
+                nurseriesData[selectedCity].forEach((nursery, index) => {
+                    const nurseryCard = document.createElement('div');
+                    nurseryCard.classList.add('nursery-card');
+                    nurseryCard.textContent = `${index + 1}. ${nursery.name} (${nursery.location}) - Address: ${nursery.address}`;
+                    nurseryCard.onclick = () => selectNursery(nursery);
+                    nurseryList.appendChild(nurseryCard);
+                });
+            }
+        }
+
+        // Function to select a nursery
+        function selectNursery(nursery) {
+            selectedNursery = nursery;
+            showQuerySection(selectedNursery);
+        }
+
+        // Function to show the query section when a nursery card is clicked
+        function showQuerySection(nursery) {
+            const querySection = document.getElementById('querySection');
+            querySection.style.display = 'block';
+
+            // Set the nursery name and location in the query section
+            const queryHeading = querySection.querySelector('h2');
+            queryHeading.textContent = `Place an Order at ${nursery.name} (${nursery.location})`;
+
+            // Update the form action to include nursery information
+            const orderForm = document.getElementById('orderForm');
+            orderForm.onsubmit = function (event) {
+                event.preventDefault();
+                saveOrder(nursery);
+            };
+        }
+
+        // Function to save an order
+        function saveOrder(nursery) {
+            const userName = document.getElementById('userName').value;
+            const userAddress = document.getElementById('userAddress').value;
+            const plantsToBuy = document.getElementById('plantsToBuy').value;
+
+            // Create a new order item
+            const orderItem = document.createElement('li');
+            orderItem.textContent = `Nursery: ${nursery.name}, Location: ${nursery.location}, Address: ${nursery.address}, Name: ${userName}, Address: ${userAddress}, Plants to Buy: ${plantsToBuy}`;
+
+            // Append the order item to the placed orders list
+            const placedOrdersList = document.getElementById('placedOrders');
+            placedOrdersList.appendChild(orderItem);
+
+            // Clear the form fields
+            document.getElementById('userName').value = '';
+            document.getElementById('userAddress').value = '';
+            document.getElementById('plantsToBuy').value = '';
+
+            // Hide the query section
+            const querySection = document.getElementById('querySection');
+            querySection.style.display = 'none';
+
+            // Reset the selected nursery
+            selectedNursery = null;
+        }
+
+        // Populate the city buttons when the page loads
+        populateCityButtons();
+    </script>
+</body>
+</html>

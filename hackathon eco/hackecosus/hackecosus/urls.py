@@ -27,5 +27,9 @@ urlpatterns = [
     path('know-your-plant', views.plant),
     path('upload-images-of-your-neighbourhood', views.upload_image, name='upload-images-of-your-neighbourhood'),
     path('check-your-locality', views.locality),
+    path('check-for-weather', views.weather, name='weather'),
+    path('buy-plants', views.nursery, name='nursery'),
+    path('upload-images-cattle-issue', views.uploadcattleimage, name='cattleupload'),
+    path('cattle-management-info-panel', views.uploadedcattleImages, name='cattleuploadedImage'),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

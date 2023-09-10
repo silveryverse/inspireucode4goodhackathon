@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<body {% if exception_occurred %}
+    style="background-image: url('https://images.pexels.com/photos/3008509/pexels-photo-3008509.jpeg?auto=compress&cs=tinysrgb&w=1600');" 
+  {% else %}
+  style="background-image: url('{{ image_url }}');"
+  {% endif %}>
+  <div class="containerthree">
+    <h1 class="weatherheading">Weather App</h1>
+    
+    <form method="POST"class='weatherform'>
+      {% csrf_token %}
+      <input type="text" name="city" placeholder="Enter City" class='cityinput'>
+      <button type="submit" class="btn" >Search</button>
+    </form>
+    <div class="weather">
+      <div class="left">
+        <h2 class="temp">{{ temp }}&#176; C</h2>
+        <h2 class="city">{{ city }}</h2>
+      </div>
+      <div class="right">
+        <div class="icon">
+          <p><img src="http://openweathermap.org/img/w/{{ icon }}.png" width="120px"></p>
+        </div>
+        <div class="condition">
+          <p>{{ description }}</p>
+          <br>
+          <p>{{ day }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+{% if exception_occurred %}
+    <script>
+        window.onload = function() {
+            alert("City information is not available to Weather API");
+        }
+    </script>
+{% endif %}
+
+</body>
+
+{%endblock%}

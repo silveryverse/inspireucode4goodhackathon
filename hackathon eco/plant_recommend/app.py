@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 import pandas as pd
+app = Flask(__name__, static_url_path='/static')
 
-app = Flask(__name__)
 
 # Load the dataset
 data = pd.read_csv('plant_data_with_tags.csv')

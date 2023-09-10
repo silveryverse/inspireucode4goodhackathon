@@ -39,7 +39,7 @@ To get started with InspireU, follow these steps:
 
 1. Clone this repository to your local machine.
 2. Install the required dependencies (required libraries in Requirements.txt file).
-3. Run the application .
+3. Run the "Plant recommendation"(run command:py -m flask run) before running "Hackeosus"(run command:py manage.py runserver)[Run Plant recommendation at port:5000 or change views.py "def plant" port].
 4. Explore the various features and make a positive impact on the environment.
 
 ## Contributing

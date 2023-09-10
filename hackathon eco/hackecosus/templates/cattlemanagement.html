@@ -1,0 +1,89 @@
+{%extends 'base.html'%}
+{%block content%}
+
+<div class='shareimage'>
+    <section>
+        <h2>Why Cattle Management Matters</h2>
+        <ul>
+            <li>
+                <strong>Traffic Safety:</strong> Uncontrolled cattle on roads pose a significant risk to both drivers and pedestrians, leading to accidents and injuries.
+            </li>
+            <li>
+                <strong>Economic Impact:</strong> Frequent traffic jams caused by cattle can result in productivity losses, delayed deliveries, and increased fuel consumption, affecting the economy.
+            </li>
+            <li>
+                <strong>Public Health:</strong> The presence of cattle on roads can lead to health hazards, including the spread of diseases, due to improper waste disposal.
+            </li>
+            <li>
+                <strong>Animal Welfare:</strong> Effective cattle management ensures the welfare of animals by reducing their exposure to accidents and harm.
+            </li>
+        </ul>
+    </section>
+    
+    <section>
+        <h2>How Cattle Management Can Make a Difference</h2>
+        <ul>
+            <li>
+                <strong>Identification and Tagging:</strong> Use technology such as RFID tags to identify and track cattle, making it easier to locate owners.
+            </li>
+            <li>
+                <strong>Awareness Campaigns:</strong> Educate communities about responsible cattle ownership, the importance of keeping cattle off roads, and the consequences of neglect.
+            </li>
+            <li>
+                <strong>Designated Grazing Areas:</strong> Establish dedicated grazing zones away from traffic, providing a safe space for cattle to roam.
+            </li>
+            <li>
+                <strong>Cattle Shelters:</strong> Construct shelters for cattle during extreme weather conditions, encouraging owners to keep them off the streets.
+            </li>
+            <li>
+                <strong>Community Engagement:</strong> Involve local volunteers and organizations to monitor and assist with cattle management efforts.
+            </li>
+            <li>
+                <strong>Legal Framework:</strong> Implement and enforce laws and regulations related to cattle ownership, ensuring accountability.
+            </li>
+            <li>
+                <strong>Collaboration with Authorities:</strong> Coordinate with local authorities to manage cattle-related traffic issues effectively.
+            </li>
+            <li>
+                <strong>Emergency Response:</strong> Develop rapid response teams to handle situations involving injured or stranded cattle.
+            </li>
+            <li>
+                <strong>Data and Technology:</strong> Utilize data and technology to maintain cattle records, monitor movements, and optimize management strategies.
+            </li>
+        </ul>
+    </section>
+
+</div>
+<div class="container">
+    
+    <h2>Upload an Image</h2>
+    <form method="post" action="{% url 'cattleupload' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="pincode">Pincode</label>
+            <input type="number" class="form-control" name="pincode" id="pincode" required>
+        </div>
+        
+        <div class="mb-3">
+            <label for="location">Location</label>
+            <input type="text" class="form-control" name="location" id="location" required>
+        </div>
+        
+        <div class="mb-3">
+            <label for="description">Description</label>
+            <textarea class="form-control" name="description" id="description" rows="3" placeholder='Describe your image here...' required></textarea>
+        </div>
+        
+        
+        <div class="mb-3">
+            <label for="image">Image</label>
+            <input type="file" class="form-control" name="image" id="image" required>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Upload</button>
+    </form>
+</div>
+<br>
+
+
+{%endblock%}
