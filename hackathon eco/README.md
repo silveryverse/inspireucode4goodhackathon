@@ -29,9 +29,6 @@ Help improve your city's environment by uploading images of land waste and sight
 
 Our Localized Weather Forecasts webpage provides hyper-localized weather forecasts. This feature aids farmers and communities in planning agricultural activities and disaster preparedness by offering precise weather information for their specific regions.
 
-### 5. Natural Calamity Alert/Prediction
-
-We implement predictive models and early warning systems to notify communities about impending natural disasters, such as floods and landslides. This feature allows for timely evacuation and preparedness, potentially saving lives and reducing the impact of natural calamities.
 
 ## Getting Started
 
